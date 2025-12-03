@@ -1,1 +1,25 @@
-
+<h3>2. Thử tạo bảng kiểu như sau:</h3>
+<table border="1">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Tên</th>
+            <th>Giới tính</th>
+            <th>Lớp</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>A</td>
+            <td>Nam</td>
+            <td>12C1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>B</td>
+            <td>Nữ</td>
+            <td>12C6</td>
+        </tr>
+        </tbody>
+</table>
