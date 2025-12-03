@@ -1,25 +1,64 @@
-<h3>2. Thử tạo bảng kiểu như sau:</h3>
-<table border="1">
-    <thead>
-        <tr>
-            <th>STT</th>
-            <th>Tên</th>
-            <th>Giới tính</th>
-            <th>Lớp</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>A</td>
-            <td>Nam</td>
-            <td>12C1</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>B</td>
-            <td>Nữ</td>
-            <td>12C6</td>
-        </tr>
-        </tbody>
-</table>
+/* 1. Định dạng các item ở ý 1 (thẻ <ul> và <li>) */
+ul {
+    /* Đặt màu nền nhẹ cho danh sách */
+    background-color: #f0f8ff; /* Màu xanh nhạt */
+    /* Thêm đệm (padding) để nội dung không bị sát mép */
+    padding: 15px;
+    /* Loại bỏ dấu chấm mặc định */
+    list-style-type: none;
+    /* Thêm đường viền */
+    border: 1px solid #add8e6; /* Viền màu xanh nhạt hơn */
+    /* Bo góc */
+    border-radius: 5px;
+    /* Chiều rộng tối đa */
+    max-width: 400px;
+}
+
+li {
+    /* Thêm khoảng cách giữa các dòng */
+    margin-bottom: 8px;
+    /* Đặt màu chữ */
+    color: #333;
+    /* Định dạng font */
+    font-family: Arial, sans-serif;
+}
+
+/* 2. Định dạng h2 ở bài tập ý 2 (như bảng) */
+h2 {
+    /* Đặt màu nền cho tiêu đề */
+    background-color: #4682b4; /* Màu xanh đậm */
+    /* Đặt màu chữ trắng */
+    color: white;
+    /* Căn chữ ra giữa */
+    text-align: center;
+    /* Thêm đệm trên và dưới */
+    padding: 10px 0;
+    /* Viền dưới đậm để nhấn mạnh */
+    border-bottom: 3px solid #1e90ff;
+    /* Bo góc nhẹ */
+    border-radius: 4px;
+    /* Định dạng font */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* (Thêm: Định dạng bảng cho đẹp hơn, mặc dù không được yêu cầu rõ) */
+table {
+    /* Chiều rộng đầy đủ */
+    width: 80%;
+    /* Thu gọn đường viền */
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Times New Roman', serif;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #000;
+    text-transform: uppercase;
+}
