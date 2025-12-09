@@ -1,96 +1,19 @@
-body {
-    margin: 0;
-    font-family: Arial;
-    background: #f3f3f3;
+/* Vùng 1: 3 liên kết theo hàng ngang */
+.menu {
+    text-align: center;      /* Canh giữa toàn bộ menu */
+    margin-top: 20px;
 }
 
-/* MENU */
-nav {
-    background: #333;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.menu a {
+    text-decoration: none;   /* Bỏ gạch chân */
+    padding: 10px 20px;      /* Tạo khoảng cách */
+    margin: 0 10px;          /* Cách nhau ngang */
+    background: #4CAF50;     /* Màu nền */
+    color: white;            /* Màu chữ */
+    border-radius: 5px;
     font-size: 18px;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* TRANG CHỦ */
-.home {
-    text-align: center;
-    padding: 40px 0;
-}
-
-/* FORM */
-.form-box {
-    width: 350px;
-    background: white;
-    margin: 30px auto;
-    padding: 20px;
-    border: 2px solid #333;
-    border-radius: 6px;
-}
-
-.form-box h2 {
-    text-align: center;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-input, select {
-    width: 100%;
-    padding: 7px;
-    margin-top: 4px;
-    border: 1px solid #888;
-    border-radius: 4px;
-}
-
-.hobbies label {
-    display: block;
-    margin: 4px 0;
-    font-weight: normal;
-}
-
-.btn-group {
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-between;
-}
-
-button {
-    padding: 8px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.submit {
-    background: #4caf50;
-    color: white;
-}
-
-.cancel {
-    background: #f44336;
-    color: white;
+.menu a:hover {
+    background: #388E3C;     /* Hiệu ứng khi rê chuột */
 }
