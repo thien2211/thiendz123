@@ -1,22 +1,55 @@
 body {
+    margin: 0;
     font-family: Arial;
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
     background: #f3f3f3;
 }
 
+/* MENU */
+nav {
+    background: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* TRANG CHỦ */
+.home {
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* FORM */
 .form-box {
-    width: 330px;
-    padding: 20px;
+    width: 350px;
     background: white;
+    margin: 30px auto;
+    padding: 20px;
     border: 2px solid #333;
     border-radius: 6px;
 }
 
 .form-box h2 {
     text-align: center;
-    margin-bottom: 15px;
 }
 
 label {
@@ -35,8 +68,8 @@ input, select {
 
 .hobbies label {
     display: block;
-    font-weight: normal;
     margin: 4px 0;
+    font-weight: normal;
 }
 
 .btn-group {
