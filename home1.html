@@ -2,16 +2,34 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Bài tập CSS - Vùng 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biểu Mẫu Đăng Ký Lớp Học</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="form-container">
+        <h2>Thông Tin Đăng Ký</h2>
+        
+        <div class="form-group">
+            <label for="ten">Tên:</label>
+            <input type="text" id="ten" name="ten" placeholder="Nhập tên của bạn">
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" value="gmail.com, Việt Nam" readonly> 
+            </div>
 
-    <div class="menu">
-        <a href="#">Trang chủ</a>
-        <a href="#">Thông tin</a>
-        <a href="#">Dịch vụ</a>
+        <div class="form-group">
+            <label>Sở thích: (Đánh dấu vào ô bạn quan tâm)</label>
+            <div class="so-thich-buttons">
+                <button type="button" class="tag-button">Thể thao</button>
+                <button type="button" class="tag-button">Đọc sách</button>
+                <button type="button" class="tag-button">Thiên nhiên</button>
+            </div>
+        </div>
+        
+        <button type="submit" class="submit-button">Đăng ký</button>
     </div>
-
 </body>
 </html>
