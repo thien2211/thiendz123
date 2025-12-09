@@ -3,53 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài Tập CSS Ngày 9/12</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Form Đăng Nhập (Vùng 2)</title>
+    <link rel="stylesheet" href="form-style.css">
 </head>
 <body>
 
-    <h1 style="text-align: center;">Bài Tập CSS Ngày 9/12</h1>
-
-    <div id="vung-1">
-        <div class="ket-qua-box">Tùng thư</div>
-        <div class="ket-qua-box">Thông báo</div>
-        <div class="ket-qua-box">Dịch vụ</div>
-    </div>
-
-    <hr>
-
     <div id="vung-2">
-        <h2>Thông tin đăng nhập</h2>
         <form>
+            <h3>Thông tin người dùng</h3>
+
             <div class="form-group">
-                <label for="name">Tên:</label>
-                <input type="text" id="name" name="name">
+                <label for="ten">Tên:</label>
+                <input type="text" id="ten" name="ten" required>
             </div>
 
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" required>
             </div>
 
             <div class="form-group">
-                <label>Quốc gia:</label>
-                <select>
-                    <option>Việt Nam</option>
-                    <option>Khác</option>
+                <label for="quocgia">Quốc gia:</label>
+                <select id="quocgia" name="quocgia">
+                    <option value="VN" selected>Việt Nam</option>
+                    <option value="Khac">Khác</option>
                 </select>
             </div>
             
-            <div class="form-group">
+            <div class="form-group hobby-group">
                 <label>Sở thích:</label>
-                <input type="checkbox" id="doc-sach" name="hobby">
-                <label for="doc-sach">Đọc sách</label>
-                <input type="checkbox" id="nghe-nhac" name="hobby">
-                <label for="nghe-nhac">Nghe nhạc</label>
+                <div class="checkbox-options">
+                    <input type="checkbox" id="doc-sach" name="so-thich" value="doc-sach">
+                    <label for="doc-sach">Đọc sách</label>
+                    
+                    <input type="checkbox" id="nghe-nhac" name="so-thich" value="nghe-nhac">
+                    <label for="nghe-nhac">Nghe nhạc</label>
+                </div>
             </div>
 
             <div class="form-buttons">
-                <button type="submit">Đăng nhập</button>
-                <button type="button">Thoát</button>
+                <button type="submit" class="primary-btn">Đăng nhập</button>
+                <button type="button" class="secondary-btn">Thoát</button>
             </div>
         </form>
     </div>
