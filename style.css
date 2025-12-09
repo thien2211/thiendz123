@@ -16,18 +16,21 @@ body {
 .header-nav {
     display: flex; /* Cho phép các mục nằm trên một hàng */
     justify-content: center; /* Căn giữa các mục */
-    margin-bottom: 30px; /* Khoảng cách giữa vùng điều hướng và form */
+    margin-bottom: 30px; 
     padding: 15px 30px;
-    background-color: #ffffff;
+    /* THAY ĐỔI MÀU NỀN VÀ KHUNG */
+    background-color: #e3f2fd; /* MÀU NỀN: Xanh nhạt */
+    border: 1px solid #2196f3; /* KHUNG MÀU: Xanh dương */
+    /* KẾT THÚC THAY ĐỔI */
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Khung nhẹ như Excel */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 450px; /* Chiều rộng lớn hơn form một chút */
-    gap: 25px; /* Khoảng cách giữa các mục */
+    max-width: 450px; 
+    gap: 25px; 
 }
 
 .nav-item {
-    text-decoration: none; /* Bỏ gạch chân cho liên kết */
+    text-decoration: none; 
     color: #007bff;
     font-weight: bold;
     padding: 5px 10px;
@@ -37,13 +40,60 @@ body {
 
 .nav-item:hover {
     color: #0056b3;
-    background-color: #e9ecef;
+    background-color: #c0d8f7; /* Điều chỉnh hover color */
 }
 
+/* Định dạng Bảng Điểm (Vùng 2) */
+.table-container {
+    /* THAY ĐỔI MÀU NỀN VÀ KHUNG */
+    background-color: #e8f5e9; /* MÀU NỀN: Xanh lá nhạt */
+    border: 1px solid #4caf50; /* KHUNG MÀU: Xanh lá */
+    /* KẾT THÚC THAY ĐỔI */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px; 
+    margin-bottom: 30px; 
+    text-align: center;
+}
 
-/* Định dạng khung biểu mẫu */
+.table-container h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    text-align: left;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd; 
+}
+
+thead tr {
+    background-color: #4caf50; /* Màu tiêu đề bảng */
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5fff6; /* Màu xen kẽ */
+}
+
+tbody tr:hover {
+    background-color: #d1e7d2; /* Hiệu ứng di chuột */
+}
+
+/* Định dạng khung biểu mẫu (Vùng 3) */
 .form-container {
-    background-color: #ffffff;
+    /* THAY ĐỔI MÀU NỀN VÀ KHUNG */
+    background-color: #fff3e0; /* MÀU NỀN: Kem */
+    border: 1px solid #ff9800; /* KHUNG MÀU: Cam */
+    /* KẾT THÚC THAY ĐỔI */
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -56,4 +106,62 @@ h2 {
     color: #333;
     margin-bottom: 20px;
 }
-/* ... (Giữ nguyên các định dạng CSS còn lại) ... */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Quan trọng để padding không làm tăng chiều rộng */
+}
+
+/* Định dạng nút Sở thích */
+.so-thich-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag-button {
+    background-color: #4CAF50; /* Màu xanh lá cây */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.tag-button:hover {
+    background-color: #45a049;
+}
+
+/* Định dạng nút Đăng ký */
+.submit-button {
+    width: 100%;
+    background-color: #007bff; /* Màu xanh dương */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
