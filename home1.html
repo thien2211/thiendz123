@@ -1,41 +1,41 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // 1. Xử lý nút Sở thích (Tag Buttons)
-    const tagButtons = document.querySelectorAll('.tag-button');
-
-    tagButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Thêm/Xóa class 'selected' để thay đổi kiểu dáng (CSS sẽ định nghĩa)
-            this.classList.toggle('selected');
-        });
-    });
-
-    // 2. Xử lý nút Đăng ký (Submit Button)
-    const submitButton = document.querySelector('.submit-button');
-
-    submitButton.addEventListener('click', function() {
-        // Lấy giá trị từ các trường nhập liệu
-        const ten = document.getElementById('ten').value.trim();
-        const email = document.getElementById('email').value.trim();
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biểu Mẫu Đăng Ký Lớp Học</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header-nav">
+        <a href="#trangchu" class="nav-item">Trang chủ</a>
+        <a href="#thongtin" class="nav-item">Thông tin</a>
+        <a href="#dichvu" class="nav-item">Dịch vụ</a>
+    </div>
+    
+    <div class="form-container">
+        <h2>Thông Tin Đăng Ký</h2>
         
-        // Lấy danh sách sở thích đã chọn
-        const selectedInterests = Array.from(document.querySelectorAll('.tag-button.selected'))
-            .map(btn => btn.textContent);
-
-        // Kiểm tra validation đơn giản
-        if (ten === "") {
-            alert("Vui lòng nhập Tên của bạn.");
-            return;
-        }
-
-        // Tạo thông báo kết quả
-        let message = `Đăng ký thành công!\n\n`;
-        message += `Tên: ${ten}\n`;
-        message += `Email: ${email}\n`;
-        message += `Sở thích đã chọn: ${selectedInterests.join(', ') || 'Không có'}\n\n`;
-        message += `Dữ liệu này sẽ được gửi đi (trên thực tế).`;
-
-        alert(message);
+        <div class="form-group">
+            <label for="ten">Tên:</label>
+            <input type="text" id="ten" name="ten" placeholder="Nhập tên của bạn">
+        </div>
         
-        // Ở đây, bạn sẽ thêm logic để gửi dữ liệu đến máy chủ (sử dụng fetch/axios, v.v.)
-    });
-});
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" value="gmail.com, Việt Nam" readonly> 
+            </div>
+
+        <div class="form-group">
+            <label>Sở thích: (Đánh dấu vào ô bạn quan tâm)</label>
+            <div class="so-thich-buttons">
+                <button type="button" class="tag-button">Thể thao</button>
+                <button type="button" class="tag-button">Đọc sách</button>
+                <button type="button" class="tag-button">Thiên nhiên</button>
+            </div>
+        </div>
+        
+        <button type="submit" class="submit-button">Đăng ký</button>
+    </div>
+</body>
+</html>
