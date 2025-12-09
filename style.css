@@ -1,86 +1,96 @@
-/* General Styling */
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
 }
 
-hr {
-    margin: 30px 0;
-}
-
-/* --- Task 1: Vùng 1 Formatting (Horizontal and Symmetrical) --- */
-
-#vung-1 {
-    display: flex; /* 1. Sets the container to use Flexbox */
-    justify-content: space-around; /* 2. Distributes space evenly around items (Symmetrical) */
-    align-items: center;
-    padding: 20px;
-}
-
-.ket-qua-box {
-    /* Basic styling for the three boxes */
-    width: 30%; /* Gives each box roughly equal width */
-    padding: 15px;
-    text-align: center;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-/* --- Task 2: Vùng 2 Border --- */
-
+/* --- Task: Vùng 2 Border --- */
 #vung-2 {
-    /* Adds a border around the form area */
-    border: 2px solid #0056b3; /* Thick blue border */
-    padding: 20px;
-    max-width: 400px;
-    margin: 0 auto; /* Center the form area on the page */
+    /* Required task: Add a border to Vùng 2 */
+    border: 3px solid #0056b3; /* A visible, distinct blue border */
+    
+    /* Styling for presentation */
+    padding: 25px;
+    width: 100%;
+    max-width: 350px; 
+    background-color: white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Form Styling for better presentation (not part of the main tasks) */
+h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Form Group Layout */
 .form-group {
     margin-bottom: 15px;
     display: flex;
+    flex-wrap: wrap; /* Allows the content to wrap, especially for hobbies */
     align-items: center;
 }
 
-.form-group label {
-    display: inline-block;
-    width: 100px; /* Aligns the labels */
-    font-weight: 600;
+.form-group label:not(.checkbox-options label) {
+    /* Style for Tên, Email, Quốc gia labels */
+    width: 80px; /* Gives a fixed width for alignment */
+    font-weight: bold;
+    color: #555;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
+.form-group input:not([type="checkbox"]), 
 .form-group select {
-    flex-grow: 1;
+    flex-grow: 1; /* Makes inputs fill the remaining space */
     padding: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 14px;
 }
 
+/* Hobbies field styling */
+.hobby-group .checkbox-options {
+    flex-grow: 1;
+    display: flex; /* Aligns checkboxes and labels horizontally */
+    gap: 15px; /* Space between options */
+    align-items: center;
+}
+
+/* Buttons Styling */
 .form-buttons {
-    text-align: right;
-    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end; /* Aligns buttons to the right, as sketched */
+    margin-top: 25px;
+    gap: 10px;
 }
 
 .form-buttons button {
     padding: 10px 15px;
-    margin-left: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
 }
 
-.form-buttons button[type="submit"] {
+.primary-btn {
     background-color: #007bff;
     color: white;
 }
 
-.form-buttons button[type="button"] {
+.secondary-btn {
     background-color: #6c757d;
     color: white;
+}
+
+.primary-btn:hover {
+    background-color: #0056b3;
+}
+
+.secondary-btn:hover {
+    background-color: #5a6268;
 }
