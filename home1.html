@@ -2,39 +2,56 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Form Đăng Ký</title>
+    <title>Website Demo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="form-box">
-    <h2>Form Đăng Ký</h2>
+    <!-- MENU -->
+    <nav>
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Thông tin</a></li>
+            <li><a href="#">Dịch vụ</a></li>
+            <li><a href="#form">Đăng ký</a></li>
+        </ul>
+    </nav>
 
-    <label>Họ tên:</label>
-    <input type="text" placeholder="Nhập họ tên...">
+    <!-- NỘI DUNG TRANG CHỦ -->
+    <section class="home">
+        <h1>Chào mừng bạn đến với Website</h1>
+        <p>Đây là trang chủ mẫu theo yêu cầu.</p>
+    </section>
 
-    <label>Email:</label>
-    <input type="email" placeholder="Nhập email...">
+    <!-- FORM ĐĂNG KÝ -->
+    <section id="form" class="form-box">
+        <h2>Form Đăng Ký</h2>
 
-    <label>Quốc gia:</label>
-    <select>
-        <option>Việt Nam</option>
-        <option>USA</option>
-        <option>Japan</option>
-    </select>
+        <label>Họ tên:</label>
+        <input type="text" placeholder="Nhập họ tên...">
 
-    <label>Sở thích:</label>
-    <div class="hobbies">
-        <label><input type="checkbox"> Đá bóng</label>
-        <label><input type="checkbox"> Nghe nhạc</label>
-        <label><input type="checkbox"> Du lịch</label>
-    </div>
+        <label>Email:</label>
+        <input type="email" placeholder="Nhập email...">
 
-    <div class="btn-group">
-        <button class="submit">Đăng ký</button>
-        <button class="cancel">Thoát</button>
-    </div>
-</div>
+        <label>Quốc gia:</label>
+        <select>
+            <option>Việt Nam</option>
+            <option>USA</option>
+            <option>Japan</option>
+        </select>
+
+        <label>Sở thích:</label>
+        <div class="hobbies">
+            <label><input type="checkbox"> Đá bóng</label>
+            <label><input type="checkbox"> Nghe nhạc</label>
+            <label><input type="checkbox"> Du lịch</label>
+        </div>
+
+        <div class="btn-group">
+            <button class="submit">Đăng ký</button>
+            <button class="cancel">Thoát</button>
+        </div>
+    </section>
 
 </body>
 </html>
