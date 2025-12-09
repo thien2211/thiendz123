@@ -1,64 +1,86 @@
-/* 1. Định dạng các item ở ý 1 (thẻ <ul> và <li>) */
-ul {
-    /* Đặt màu nền nhẹ cho danh sách */
-    background-color: #f0f8ff; /* Màu xanh nhạt */
-    /* Thêm đệm (padding) để nội dung không bị sát mép */
-    padding: 15px;
-    /* Loại bỏ dấu chấm mặc định */
-    list-style-type: none;
-    /* Thêm đường viền */
-    border: 1px solid #add8e6; /* Viền màu xanh nhạt hơn */
-    /* Bo góc */
-    border-radius: 5px;
-    /* Chiều rộng tối đa */
-    max-width: 400px;
-}
-
-li {
-    /* Thêm khoảng cách giữa các dòng */
-    margin-bottom: 8px;
-    /* Đặt màu chữ */
-    color: #333;
-    /* Định dạng font */
+/* General Styling */
+body {
     font-family: Arial, sans-serif;
+    padding: 20px;
 }
 
-/* 2. Định dạng h2 ở bài tập ý 2 (như bảng) */
-h2 {
-    /* Đặt màu nền cho tiêu đề */
-    background-color: #4682b4; /* Màu xanh đậm */
-    /* Đặt màu chữ trắng */
-    color: white;
-    /* Căn chữ ra giữa */
+hr {
+    margin: 30px 0;
+}
+
+/* --- Task 1: Vùng 1 Formatting (Horizontal and Symmetrical) --- */
+
+#vung-1 {
+    display: flex; /* 1. Sets the container to use Flexbox */
+    justify-content: space-around; /* 2. Distributes space evenly around items (Symmetrical) */
+    align-items: center;
+    padding: 20px;
+}
+
+.ket-qua-box {
+    /* Basic styling for the three boxes */
+    width: 30%; /* Gives each box roughly equal width */
+    padding: 15px;
     text-align: center;
-    /* Thêm đệm trên và dưới */
-    padding: 10px 0;
-    /* Viền dưới đậm để nhấn mạnh */
-    border-bottom: 3px solid #1e90ff;
-    /* Bo góc nhẹ */
-    border-radius: 4px;
-    /* Định dạng font */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* (Thêm: Định dạng bảng cho đẹp hơn, mặc dù không được yêu cầu rõ) */
-table {
-    /* Chiều rộng đầy đủ */
-    width: 80%;
-    /* Thu gọn đường viền */
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-family: 'Times New Roman', serif;
-}
-
-th, td {
+    background-color: #f0f0f0;
     border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-th {
-    background-color: #f2f2f2;
-    color: #000;
-    text-transform: uppercase;
+/* --- Task 2: Vùng 2 Border --- */
+
+#vung-2 {
+    /* Adds a border around the form area */
+    border: 2px solid #0056b3; /* Thick blue border */
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto; /* Center the form area on the page */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Form Styling for better presentation (not part of the main tasks) */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    display: inline-block;
+    width: 100px; /* Aligns the labels */
+    font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-buttons {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.form-buttons button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-buttons button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+}
+
+.form-buttons button[type="button"] {
+    background-color: #6c757d;
+    color: white;
 }
