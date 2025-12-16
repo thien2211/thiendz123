@@ -6,47 +6,36 @@
 
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh; /* Full height of the viewport */
 }
 
-/* Header styling */
-.header {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-/* Container for the columns */
-.container {
-    width: 100%;
-    overflow: hidden; /* Clearfix to prevent container collapse */
-}
-
-/* Styling for each column */
-.column {
-    width: 33.33%; /* Each column takes up 1/3 of the space */
-    float: left;
-    background-color: #e1e1e1;
-    padding: 20px;
+/* Sidebar styling */
+.sidenav {
+    height: 100%; /* Full height */
+    width: 250px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    background-color: #111; /* Dark background */
+    padding-top: 20px;
+    color: white;
     box-sizing: border-box;
-    text-align: center;
 }
 
-/* Footer styling */
-.footer {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 20px;
+.sidenav a {
+    display: block;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
     font-size: 18px;
-    font-weight: bold;
-    clear: both; /* Ensures footer stays below the floated columns */
 }
 
-/* Responsive design: Stack columns on small screens */
-@media screen and (max-width: 768px) {
-    .column {
-        width: 100%; /* Make columns take full width on smaller screens */
-        float: none; /* Disable float on small screens */
-    }
+.sidenav a:hover {
+    background-color: #575757; /* Hover effect */
 }
+
+/* Main content styling */
+.main-content {
+    margin-left: 250px; /* Add left margin equal to sidebar width */
+    padding: 20px
