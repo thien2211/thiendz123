@@ -1,67 +1,17 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biểu Mẫu Đăng Ký Lớp Học</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="header-nav">
-        <a href="#trangchu" class="nav-item">Trang chủ</a>
-        <a href="#thongtin" class="nav-item">Thông tin</a>
-        <a href="#dichvu" class="nav-item">Dịch vụ</a>
-    </div>
-    
-    <div class="table-container">
-        <h3>Bảng Điểm Môn Học</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Môn học</th>
-                    <th>Điểm số</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Toán</td>
-                    <td>9.0</td>
-                </tr>
-                <tr>
-                    <td>Văn</td>
-                    <td>7.5</td>
-                </tr>
-                <tr>
-                    <td>Tiếng Anh</td>
-                    <td>8.5</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<h2>CSS Template using Float</h2>
+<p>In this example, we have created a header, three equal columns and a footer. On smaller screens, the columns will stack on top of each other.</p>
+<p>Resize the browser window to see the responsive effect.</p>
 
-    <div class="form-container">
-        <h2>Thông Tin Đăng Ký</h2>
-        
-        <div class="form-group">
-            <label for="ten">Tên:</label>
-            <input type="text" id="ten" name="ten" placeholder="Nhập tên của bạn">
-        </div>
-        
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" value="gmail.com, Việt Nam" readonly> 
-            </div>
+<div class="header">
+  <h2>Header</h2>
+</div>
 
-        <div class="form-group">
-            <label>Sở thích: (Đánh dấu vào ô bạn quan tâm)</label>
-            <div class="so-thich-buttons">
-                <button type="button" class="tag-button">Thể thao</button>
-                <button type="button" class="tag-button">Đọc sách</button>
-                <button type="button" class="tag-button">Thiên nhiên</button>
-            </div>
-        </div>
-        
-        <button type="submit" class="submit-button">Đăng ký</button>
-    </div>
-</body>
-</html>
+<div class="row">
+  <div class="column" style="background-color:#aaa;">Column</div>
+  <div class="column" style="background-color:#bbb;">Column</div>
+  <div class="column" style="background-color:#ccc;">Column</div>
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
