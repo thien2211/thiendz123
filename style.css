@@ -1,49 +1,71 @@
-/* Reset cơ bản */
-* {
+/* Thiết lập cơ bản */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0; /* Màu nền tổng thể, hơi nhạt */
+    color: #333;
 }
 
-/* Top navigation */
+/* Thanh điều hướng (Topnav) */
 .topnav {
-    background-color: #333;
-    padding: 12px 16px;
+    overflow: hidden;
+    background-color: #333; /* Màu nền đen đậm */
+    color: white;
+    padding: 0; /* Loại bỏ padding để các link dính sát vào nhau */
+    display: flex; /* Dùng flexbox để căn chỉnh các link */
+    align-items: stretch;
 }
 
 .topnav a {
-    color: #9acd32;           /* xanh nhạt giống hình */
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px; /* Padding cho các link */
     text-decoration: none;
-    margin-right: 20px;
-    font-size: 14px;
+    font-size: 17px;
+    border-right: 1px solid #444; /* Thêm đường viền nhỏ nếu cần */
+}
+
+/* Loại bỏ border cho link cuối cùng nếu muốn */
+.topnav a:last-child {
+    border-right: none;
 }
 
 .topnav a:hover {
-    color: #ffffff;
+    background-color: #575757;
+    color: white;
 }
 
-/* Content */
+/* Khu vực nội dung chính (Content) */
 .content {
-    background-color: #e6e6e6;
-    padding: 30px 20px;
-    min-height: 200px;
+    /* Đảm bảo nội dung chiếm hết chiều rộng giữa topnav và footer */
+    min-height: calc(100vh - 51px - 40px); /* Ví dụ: 100vh trừ chiều cao topnav và footer */
+    background-color: #e0e0e0; /* Màu nền xám nhạt */
+    padding: 20px; /* Padding bên trong content */
+    border-bottom: 1px solid #ccc; /* Đường viền nhẹ ngăn cách với footer */
 }
 
 .content h1 {
-    font-size: 22px;
+    font-size: 32px;
+    color: #333;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
 .content p {
-    color: #333;
-    font-size: 14px;
+    font-size: 16px;
+    color: #555;
+    margin-top: 0;
 }
 
-/* Footer */
+/* Khu vực chân trang (Footer) */
 .footer {
-    background-color: #f5f5f5;
-    padding: 20px;
-    font-size: 14px;
+    background-color: #cccccc; /* Màu nền xám nhạt hơn content một chút */
     color: #333;
+    text-align: left; /* Căn lề trái theo hình */
+    padding: 10px 20px; /* Padding cho footer */
+    font-size: 14px;
+    border-top: 1px solid #bbb;
 }
