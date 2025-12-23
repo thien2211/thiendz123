@@ -4,7 +4,6 @@
     background-color: #2196F3; /* Blue background */
     padding: 10px;
 }
-
 /* The flex items */
 .day > div {
     background-color: #f1f1f1; /* Light grey background */
