@@ -1,95 +1,46 @@
-* {
-
-    box-sizing: border-box;
-
-}
-
-
-
+/* Thiết lập cơ bản */
 body {
-
-    margin: 0;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    background-color: #ffffff;
-
+    font-family: Arial, sans-serif;
+    padding: 20px;
 }
 
-
-
-.header {
-
-    text-align: center;
-
-    padding: 32px;
-
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-
-
-.container {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    padding: 0 4px;
-
+p {
+    margin-top: 15px;
+    font-size: 14px;
 }
 
-
-
-
-.column {
-
-    flex: 25%;
-
-    max-width: 25%;
-
-    padding: 0 4px;
-
-}
-
-
-
-.column img {
-
-    margin-top: 8px;
-
-    vertical-align: middle;
-
+/* 1. Thiết lập Flex Container */
+.flex-container {
+    display: flex; /* Bật chế độ Flexbox */
     width: 100%;
-
-
-    display: block;
-
+    /* Viền màu xanh bao quanh toàn bộ container */
+    border: 5px solid #007bff; /* Màu xanh dương tương tự hình */
 }
 
-
-
-
-@media screen and (max-width: 800px) {
-
-    .column {
-
-        flex: 50%;
-
-        max-width: 50%;
-
-    }
-
+/* 2. Thiết lập Flex Item */
+.flex-item {
+    /* Đảm bảo mỗi item chiếm cùng một lượng không gian (chia đều) */
+    flex-grow: 1; 
+    
+    /* Thiết kế ô ngày */
+    background-color: white; 
+    color: black;
+    text-align: center;
+    padding: 15px 10px; /* Khoảng cách bên trong item */
+    font-weight: bold;
+    font-size: 16px;
+    
+    /* Tạo khoảng cách màu xanh giữa các item (dùng margin + background của container) */
+    margin: 5px; /* Tạo khoảng cách 5px xung quanh mỗi item */
+    
+    /* Để các item có viền trắng mỏng (giống hình) */
+    border: 1px solid #ccc;
 }
 
-
-@media screen and (max-width: 600px) {
-
-    .column {
-
-        flex: 100%;
-
-        max-width: 100%;
-
-    }
-
-}
+/* Tùy chỉnh đặc biệt để đạt hiệu ứng viền sát nhau theo hình */
+/* Vì container có border 5px, nên margin 5px sẽ tạo ra "khe hở" màu xanh */
