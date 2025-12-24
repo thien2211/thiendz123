@@ -1,79 +1,59 @@
+/* Thiết lập cơ bản */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Màu nền nhẹ */
+    background-color: #f8f8f8; /* Màu nền trắng xám nhẹ */
 }
-/* --- Thanh điều hướng (Navbar) --- */
+/* 1. Thanh điều hướng (Navbar) */
 .navbar {
-    background-color: #333;
+    background-color: #333333; /* Màu đen đậm */
     padding: 10px 0;
-    color: white;
+    height: 20px; /* Chiều cao cố định */
 }
 .navbar nav {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto; /* Căn giữa thanh điều hướng nếu màn hình lớn */
+    /* Đảm bảo nội dung căn lề trái như trong ảnh */
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 10px;
 }
 .navbar a {
     color: white;
     text-decoration: none;
     padding: 0 15px;
-    font-weight: bold;
-    font-size: 16px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px; /* Căn giữa văn bản theo chiều cao */
+    display: inline-block;
 }
-/* --- Vùng nội dung chính (Content Wrapper) --- */
+/* 2. Vùng nội dung chính (Three-Column Layout) */
 .content-wrapper {
-    display: flex; /* Sử dụng Flexbox để tạo bố cục 3 cột */
-    max-width: 1200px; /* Chiều rộng tối đa của nội dung */
-    margin: 20px auto; /* Căn giữa và tạo khoảng cách */
-    padding: 0 10px;
-    background-color: white; /* Nền trắng cho phần nội dung */
+    display: flex; /* Kích hoạt Flexbox cho bố cục cột */
+    max-width: 1200px; 
+    margin: 10px auto; 
+    padding: 0 10px; /* Khoảng cách lề ngoài */
 }
-/* --- Cột bên (Side Columns) --- */
-.side-column {
-    flex: 1; /* Mỗi cột bên chiếm 1 phần */
-    padding: 10px 20px;
-    /* Chiều rộng tương đối, ví dụ: khoảng 20% */
-}
-/* --- Cột nội dung chính (Main Column) --- */
-.main-column {
-    flex: 2; /* Cột chính chiếm 2 phần (gấp đôi cột bên) */
-    padding: 10px 20px;
-    border-left: 1px solid #ddd; /* Đường viền nhẹ để tách biệt */
-    border-right: 1px solid #ddd;
-}
-/* Định kiểu cho tiêu đề */
+/* 3. Tiêu đề Cột */
 h3 {
-    margin-top: 0;
     font-size: 20px;
     font-weight: bold;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
-/* Định kiểu cho chữ "Side" ở 2 bên giống trong ảnh */
-.side-column h3 {
-    text-align: left;
+/* 4. Cột bên (Side Columns) */
+.side-column {
+    flex: 1; /* Cột bên chiếm 1 phần */
+    padding: 0 10px; /* Khoảng cách giữa các cột */
 }
-.side-column.right h3 {
-    text-align: right; /* Căn phải cho tiêu đề cột bên phải */
+/* 5. Cột nội dung chính (Main Column) */
+.main-column {
+    flex: 2; /* Cột chính chiếm 2 phần (rộng hơn) */
+    padding: 0 20px; /* Khoảng cách giữa cột chính và cột bên */
+    /* Có thể thêm border nếu muốn tách rõ ràng hơn */
 }
-.main-column h3 {
-    text-align: left;
-}
+/* 6. Định dạng chữ (Lorem Ipsum) */
 p {
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-/* --- Responsive (Tùy chọn) --- */
-@media (max-width: 768px) {
-    .content-wrapper {
-        flex-direction: column; /* Trên màn hình nhỏ, chuyển sang bố cục một cột */
-    }
-    .main-column {
-        border-left: none;
-        border-right: none;
-        border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
-    }
+    line-height: 1.5;
+    font-size: 14px;
+    color: #333;
 }
