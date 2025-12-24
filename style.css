@@ -1,16 +1,79 @@
-/* The parent container */
-.day {
-    display: flex;
-    background-color: #2196F3; /* Blue background */
-    padding: 10px;
-}
-/* The flex items */
-.day > div {
-    background-color: #f1f1f1; /* Light grey background */
-    margin: 10px;
-    padding: 20px;
-    font-size: 25px;
-    flex: 1;                 /* Ensures items grow equally */
-    text-align: center;      /* Centers the text */
+body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Màu nền nhẹ */
+}
+/* --- Thanh điều hướng (Navbar) --- */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+    color: white;
+}
+.navbar nav {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto; /* Căn giữa thanh điều hướng nếu màn hình lớn */
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+/* --- Vùng nội dung chính (Content Wrapper) --- */
+.content-wrapper {
+    display: flex; /* Sử dụng Flexbox để tạo bố cục 3 cột */
+    max-width: 1200px; /* Chiều rộng tối đa của nội dung */
+    margin: 20px auto; /* Căn giữa và tạo khoảng cách */
+    padding: 0 10px;
+    background-color: white; /* Nền trắng cho phần nội dung */
+}
+/* --- Cột bên (Side Columns) --- */
+.side-column {
+    flex: 1; /* Mỗi cột bên chiếm 1 phần */
+    padding: 10px 20px;
+    /* Chiều rộng tương đối, ví dụ: khoảng 20% */
+}
+/* --- Cột nội dung chính (Main Column) --- */
+.main-column {
+    flex: 2; /* Cột chính chiếm 2 phần (gấp đôi cột bên) */
+    padding: 10px 20px;
+    border-left: 1px solid #ddd; /* Đường viền nhẹ để tách biệt */
+    border-right: 1px solid #ddd;
+}
+/* Định kiểu cho tiêu đề */
+h3 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+/* Định kiểu cho chữ "Side" ở 2 bên giống trong ảnh */
+.side-column h3 {
+    text-align: left;
+}
+.side-column.right h3 {
+    text-align: right; /* Căn phải cho tiêu đề cột bên phải */
+}
+.main-column h3 {
+    text-align: left;
+}
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+/* --- Responsive (Tùy chọn) --- */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Trên màn hình nhỏ, chuyển sang bố cục một cột */
+    }
+    .main-column {
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
 }
