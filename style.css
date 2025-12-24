@@ -1,41 +1,71 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+* {
+  box-sizing: border-box;
+}
 
-<header>
-  <h1>My Header</h1>
-  <p>Resize the browser window to see the responsive effect.</p>
-</header>
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+}
 
-<ul class="topnav">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">News</a></li>
-  <li><a href="#">Contact</a></li>
-  <li><a href="#">About</a></li>
-</ul>
+/* Hide header to match the reference image */
+header {
+  display: none; 
+}
 
-<div class="flex-container">
-  <div>
-    <h2>Side</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.</p>
-  </div>
+/* Top Navigation */
+.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
 
-  <div>
-    <h2>Main Content</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-  </div>
+.topnav li {
+  float: left;
+}
 
-  <div>
-    <h2>Side</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.</p>
-  </div>  
-</div>
+.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-</body>
-</html>
+.topnav li a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Flex Layout */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container > div {
+  padding: 20px;
+}
+
+/* Left Column */
+.flex-container > div:first-child {
+  flex: 25%;
+}
+
+/* Main Content */
+.flex-container > div:nth-child(2) {
+  flex: 50%;
+}
+
+/* Right Column */
+.flex-container > div:last-child {
+  flex: 25%;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
