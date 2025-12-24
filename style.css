@@ -1,59 +1,35 @@
-/* Thiết lập cơ bản */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8; /* Màu nền trắng xám nhẹ */
-}
-/* 1. Thanh điều hướng (Navbar) */
-.navbar {
-    background-color: #333333; /* Màu đen đậm */
-    padding: 10px 0;
-    height: 20px; /* Chiều cao cố định */
-}
-.navbar nav {
-    /* Đảm bảo nội dung căn lề trái như trong ảnh */
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 0 10px;
-}
-.navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 0 15px;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 20px; /* Căn giữa văn bản theo chiều cao */
-    display: inline-block;
-}
-/* 2. Vùng nội dung chính (Three-Column Layout) */
-.content-wrapper {
-    display: flex; /* Kích hoạt Flexbox cho bố cục cột */
-    max-width: 1200px; 
-    margin: 10px auto; 
-    padding: 0 10px; /* Khoảng cách lề ngoài */
-}
-/* 3. Tiêu đề Cột */
-h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-/* 4. Cột bên (Side Columns) */
-.side-column {
-    flex: 1; /* Cột bên chiếm 1 phần */
-    padding: 0 10px; /* Khoảng cách giữa các cột */
-}
-/* 5. Cột nội dung chính (Main Column) */
-.main-column {
-    flex: 2; /* Cột chính chiếm 2 phần (rộng hơn) */
-    padding: 0 20px; /* Khoảng cách giữa cột chính và cột bên */
-    /* Có thể thêm border nếu muốn tách rõ ràng hơn */
-}
-/* 6. Định dạng chữ (Lorem Ipsum) */
-p {
-    line-height: 1.5;
-    font-size: 14px;
-    color: #333;
-}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>My Header</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</header>
+<ul class="topnav">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">News</a></li>
+  <li><a href="#">Contact</a></li>
+  <li><a href="#">About</a></li>
+</ul>
+<div class="flex-container">
+  <div>
+    <h2>Side</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.</p>
+  </div>
+  <div>
+    <h2>Main Content</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  <div>
+    <h2>Side</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.</p>
+  </div>  
+</div>
+</body>
+</html>
