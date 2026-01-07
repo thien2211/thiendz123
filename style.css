@@ -1,71 +1,69 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
-  margin: 0;
+    margin: 0; /* Bắt buộc để sát mép màn hình */
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* Hide header to match the reference image */
-header {
-  display: none; 
+.card {
+    width: 100%; /* Chiếm hết chiều ngang */
+    margin: 0;
+    background-color: #fff;
 }
 
-/* Top Navigation */
-.topnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+.image-container {
+    width: 100%;
 }
 
-.topnav li {
-  float: left;
+.image-container img {
+    width: 100%; /* Ảnh giãn theo chiều rộng khung */
+    height: auto;
+    display: block; /* Loại bỏ khoảng hở nhỏ dưới chân ảnh */
 }
 
-.topnav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.content {
+    padding: 16px; /* Giữ khoảng cách cho chữ không bị dính sát mép */
 }
 
-.topnav li a:hover {
-  background-color: #ddd;
-  color: black;
+.title {
+    margin: 10px 0;
+    font-size: 24px;
 }
 
-/* Flex Layout */
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
+.subtitle {
+    color: #000;
+    margin-bottom: 20px;
 }
 
-.flex-container > div {
-  padding: 20px;
+.date {
+    color: #757575;
 }
 
-/* Left Column */
-.flex-container > div:first-child {
-  flex: 25%;
+.text {
+    line-height: 1.5;
+    margin-bottom: 30px;
 }
 
-/* Main Content */
-.flex-container > div:nth-child(2) {
-  flex: 50%;
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
 }
 
-/* Right Column */
-.flex-container > div:last-child {
-  flex: 25%;
+.btn {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-/* Responsive Layout */
-@media screen and (max-width: 600px) {
-  .flex-container {
-    flex-direction: column;
-  }
+.badge {
+    background-color: black;
+    color: white;
+    padding: 2px 8px;
 }
